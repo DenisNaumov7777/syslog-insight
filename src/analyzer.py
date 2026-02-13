@@ -11,7 +11,6 @@ class LogAnalyzer:
 
     def __init__(self, log_file: str):
         self.log_file = Path(log_file)
-        # ИСПРАВЛЕНИЕ: {2} заменено на + (одна или более букв), чтобы читать "July"
         self.log_pattern = re.compile(
             r"(?P<timestamp>[A-Z][a-z]+ \d+ \d+:\d+:\d+) "
             r"(?P<host>[\w]+) "
